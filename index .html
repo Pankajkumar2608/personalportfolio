@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Pankaj Jaat - Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Pankaj Jaat</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="image-removebg-preview.png" alt="Pankaj Jaat">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Pankaj</span></h1>
+            <h3 class="typing-text">I'm a <span id="typed-text"></span><span class="cursor"></span></h3>
+            <p>Android Developer and Front End Developer specializing in creating mobile applications and responsive websites. Passionate about building user-friendly and visually appealing digital experiences.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Pankajkumar2608"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/pankaj_j_a_a_t/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#contact" class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Android Development</h3>
+                <p>Creating robust and user-friendly mobile applications for Android devices.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Developing responsive and interactive websites using modern web technologies.</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-paint-brush"></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and visually appealing user interfaces for web and mobile applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-box">
+                <i class="img"></i>
+                <h3>Kotlin</h3>
+            </div>
+            <div class="skill-box">
+                <i class="fab fa-java"></i>
+                <h3>Java</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-box">
+            <h3>B.Tech in Computer Science</h3>
+            <p>Punjab Engineering College (PEC), Chandigarh</p>
+            <p>2nd Year (Currently Pursuing)</p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-box">
+            <h3>AI Playground</h3>
+            <img src="image1.png" alt="AI Playground App Screenshot">
+            <p>An interactive AI chatbot application with a sleek interface. Features include:</p>
+            <ul>
+                <li>Chat with AI functionality</li>
+                <li>User-friendly design with eye-catching visuals</li>
+                <li>How-to-use guide for new users</li>
+            </ul>
+            <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-box">
+            <h3>PEC College App</h3>
+            <img src="img2.jpg" alt="PEC College App Screenshot">
+            <p>A comprehensive app for PEC Chandigarh students, offering:</p>
+            <ul>
+                <li>Timetable and syllabus access</li>
+                <li>Semester schedule</li>
+                <li>Discussion groups for collaborative learning</li>
+                <li>Secure login and registration system</li>
+            </ul>
+            <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project-box">
+            <h3>College Predictor</h3>
+            <p>A web application for predicting college admissions based on JEE Mains and Advanced scores.</p>
+            <a href="https://motivationkaksha.xyz" class="btn">Try it out</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>Or email me directly at: <a href="mailto:pankajjaat2608@gmail.com">pankajjaat2608@gmail.com</a></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
