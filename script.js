@@ -22,32 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (Keep the existing JavaScript from the previous response) ...
 
     // Handle form submission
     const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        const response = await fetch('https://formspree.io/f/your_formspree_endpoint', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const response = await fetch('https://formspree.io/f/your_formspree_endpoint', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            if (response.ok) {
+                alert('Message sent successfully!');
+                contactForm.reset();
+            } else {
+                alert('Oops! There was a problem sending your message. Please try again.');
             }
         });
-        if (response.ok) {
-            alert('Message sent successfully!');
-            contactForm.reset();
-        } else {
-            alert('Oops! There was a problem sending your message. Please try again.');
-        }
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (keep existing code) ...
+    }
 
     // Typing effect
     const typedTextSpan = document.querySelector("#typed-text");
@@ -66,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
             charIndex++;
             setTimeout(type, typingDelay);
-        } 
-        else {
+        } else {
             cursorSpan.classList.remove("typing");
             setTimeout(erase, newTextDelay);
         }
@@ -76,22 +71,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function erase() {
         if (charIndex > 0) {
             if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
             charIndex--;
             setTimeout(erase, erasingDelay);
-        } 
-        else {
+        } else {
             cursorSpan.classList.remove("typing");
             textArrayIndex++;
-            if(textArrayIndex>=textArray.length) textArrayIndex=0;
+            if(textArrayIndex >= textArray.length) textArrayIndex = 0;
             setTimeout(type, typingDelay + 1100);
         }
     }
 
     if(textArray.length) setTimeout(type, newTextDelay + 250);
-});
-document.addEventListener('DOMContentLoaded', () => {
-    // ... (existing code) ...
 
     // Handle College Predictor link
     const collegePredictorLink = document.querySelector('.project-box a[href="https://motivationkaksha.xyz"]');
